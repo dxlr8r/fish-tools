@@ -1,7 +1,7 @@
 #!/usr/bin/env fish
 # Name: fish-tools
 # Version: 1.0
-# Copyright (c) 2015, Simen Strange Øya
+# Copyright (c) 2016, Simen Strange Øya
 # License: Modified BSD license
 # https://github.com/dxlr8r/fish-tools/blob/master/LICENSE
 

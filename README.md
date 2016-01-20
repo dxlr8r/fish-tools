@@ -29,6 +29,6 @@ Download and put anywhere on your computer. If you want to use it from your shel
 
 ## License
 
-Copyright © 2015 Simen Strange Øya
+Copyright © 2016 Simen Strange Øya
 
 Distributed under the Modified BSD license
