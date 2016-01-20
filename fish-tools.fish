@@ -35,19 +35,19 @@ function flatten -d 'flatten delim list # flattens a list'
 	echo -ns $out
 end
 
-function flatten0 -d 'flatten list # flatten list with 0-byte as delimiter'
+function flatten0 -d 'flatten0 list # flatten list with 0-byte as delimiter'
 	echo -ens (flatten "\x00" $argv[1..(count $argv)]) # wrapped echo enable interpretation of backslash escapes
 end
 
-function flattenl -d 'flatten list # flatten list with newline as delimiter'
+function flattenl -d 'flattenl list # flatten list with newline as delimiter'
 	echo -ens (flatten "\n" $argv[1..(count $argv)]) # wrapped echo enable interpretation of backslash escapes
 end
 
-function flattens -d 'flatten list # flatten list with space as delimiter'
+function flattens -d 'flattens list # flatten list with space as delimiter'
 	flatten " " $argv[1..(count $argv)]
 end
 
-function flattenn -d 'flatten list # flatten list with no delimiter'
+function flattenn -d 'flattenn list # flatten list with no delimiter'
 	flatten "" $argv[1..(count $argv)]
 end
 
@@ -84,7 +84,7 @@ end
 
 alias @1 status-out # @ is used as a sign for status, and 1 is the FD for stdout
 
-function fn-desc -a fn -d 'fn-help fn # prints the description of specified fn'
+function fn-desc -a fn -d 'fn-help fn # prints the description of specified function'
 	#funced -e cat $fn | head -1 | perl -ne '/^function\s+\S+\s+--description\s+'(.+)'$/ && print $1'
 	funced -e cat $fn | head -1 | perl -ne '/^function\s+\S+\s+--description\s+(.+)$/ && print $1' | perl -pe 's/(^\')(.+?)(\'$)/$2/'
 end
