@@ -10,7 +10,7 @@ function length -d 'length string # prints length of a string'
 	echo -ns $argv[1] | wc -m | xargs printf "%u"
 end
 
-function repeat -a x string -d 'repeat x string # x=times to repeat'
+function repeat -a x string -d 'repeat x string # prints a string x times'
 	
 	if test $x -gt 0 # seq does weird things when seq <= 0
 		set buffer ""
