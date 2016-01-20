@@ -17,14 +17,14 @@ Download and put anywhere on your computer. If you want to use it from your shel
 	* `repeat x string # prints a string x times`
 * list tools: 
 	* `flatten delim list # flattens a list`
-	* `flatten0 list # flatten list with 0-byte as delimiter` *alias fl0*
-	* `flattenl list # flatten list with newline as delimiter` *alias fll*
-	* `flattens list # flatten list with space as delimiter` *alias fls*
-	* `flattenn list # flatten list with no delimiter` *alias fln*
+	* `flatten0 list # flatten list with 0-byte as delimiter` *alias `fl0`*
+	* `flattenl list # flatten list with newline as delimiter` *alias `fll`*
+	* `flattens list # flatten list with space as delimiter` *alias `fls`*
+	* `flattenn list # flatten list with no delimiter` *alias `fln`*
 	* `list-search needle haystick # prints position of needle in haystack (list), if not found prints -1`
 * shell tools
 	* `realpath dir # as realpath in Linux but this works on all platforms with fish and perl`
-	* `status-out cmd # executes appended cmd, then redirect $status to stdout` *alias @1*
+	* `status-out cmd # executes appended cmd, then redirect $status to stdout` *alias `@1`*
 	* `fn-help fn # prints the description of specified function`
 
 ## License
