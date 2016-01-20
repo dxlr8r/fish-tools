@@ -14,7 +14,7 @@ Download and put anywhere on your computer. If you want to use it from your shel
 
 * string tools: 
 	* `length string # prints length of a string`
-	* `repeat x string # repeats a string x times`
+	* `repeat x string # prints a string x times`
 * list tools: 
 	* `flatten delim list # flattens a list`
 	* `flatten0 list # flatten list with 0-byte as delimiter` *alias fl0*
