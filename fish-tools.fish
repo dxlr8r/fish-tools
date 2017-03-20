@@ -1,6 +1,6 @@
 #!/usr/bin/env fish
 # Name: fish-tools
-# Version: 1.7.0
+# Version: 1.7.1
 # Copyright (c) 2016, Simen Strange Øya
 # License: Modified BSD license
 # https://github.com/dxlr8r/fish-tools/blob/master/LICENSE
@@ -45,10 +45,8 @@ end
 # list tools
 function flatten -d 'flatten delim list # flattens a list'
 	if test (count $argv) -ge 2
-		set delim (echo -nes $argv[1])
-		set str   (printf "%s$delim" $argv[2..(count $argv)])
-
-		string sub -s 1 -l (math (string length $str; or echo -n 0)-(string length $delim; or echo -n 0)) $str
+		set delim $argv[1]
+		printf "%s$delim" $argv[2..(count $argv)] | head -c-(echo -nes $delim | wc -c)
 	else
 		echo -ns ''
 	end
@@ -56,11 +54,10 @@ end
 
 function flatten2 -d 'flatten delim list # flattens a list'
 	if test (count $argv) -ge 3
-		set delim (echo -nes $argv[1])
-		set tail  (echo -nes $argv[2])
-		set str   (printf "%s$delim" $argv[3..(count $argv)])
-
-		printf '%s%s' (string sub -s 1 -l (math (string length $str; or echo -n 0)-(string length $delim; or echo -n 0)) $str) $tail
+		set delim $argv[1]
+		set tail  $argv[2]
+		printf "%s$delim" $argv[3..(count $argv)] | head -c-(echo -nes $delim | wc -c)
+		printf "%b" $tail
 	else
 		echo -ns ''
 	end
