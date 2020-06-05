@@ -1,7 +1,7 @@
 #!/usr/bin/env fish
 # Name: fish-tools
 # Version: 1.7.1
-# Copyright (c) 2016, Simen Strange Øya
+# Copyright (c) 2017, Simen Strange Øya
 # License: Modified BSD license
 # https://github.com/dxlr8r/fish-tools/blob/master/LICENSE
 
@@ -42,7 +42,7 @@ function stripcomments -d 'stripcomments str # removes comments from str'
 end
 
 
-# list tools
+# list tools, ~2x slower than normal printf, with small amount of data it doesn't matter though
 function flatten -d 'flatten delim list # flattens a list'
 	if test (count $argv) -ge 2
 		set delim $argv[1]
